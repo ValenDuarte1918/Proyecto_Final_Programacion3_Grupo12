@@ -1,7 +1,11 @@
 ﻿using Entidades;
 using Servicios;
 using System;
+//using System.Collections.Generic;
 using System.Drawing;
+//using System.Linq;
+//using System.Web;
+//using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace ClinicaMedica
@@ -10,7 +14,6 @@ namespace ClinicaMedica
     {
         private GestionDdl gestorDdl = new GestionDdl();
         GestionRegistros registros = new GestionRegistros();
-        GestionUsuario gestionUsuario = new GestionUsuario();
         private string legajo;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,6 +25,7 @@ namespace ClinicaMedica
                 gestorDdl.CargarLocalidades(ddlLocalidades, 0);
                 gestorDdl.CargarEspecialidades(ddlEspecialidades);
                 CargarProxLegajo();
+
 
                 if (Session["UsuarioActivo"] != null)
                 {
@@ -93,6 +97,7 @@ namespace ClinicaMedica
                 return;
             }
 
+
             Medico nuevoMedico = new Medico
             {
                 Dni = txtDniMedico.Text.Trim(),
@@ -114,25 +119,14 @@ namespace ClinicaMedica
                 lblMensaje.Text = "Médico registrado correctamente.";
                 lblMensaje.Visible = true;
                 lblMensaje.ForeColor = System.Drawing.ColorTranslator.FromHtml("#94ff6c");
-
-                if (gestionUsuario.CrearNuevaCuenta(nuevoMedico.Nombre, nuevoMedico.Apellido, nuevoMedico.Dni))
-                {
-                    lblMensaje.Text += " - Usuario: " + gestionUsuario.ObtenerNombreUsuario(nuevoMedico.Dni);
-                }
-                else
-                {
-                    lblMensaje.Text = "Error al crear cuenta";
-                }
             }
             else
             {
                 lblMensaje.Text = "Error al registrar médico";
                 lblMensaje.Visible = true;
                 lblMensaje.ForeColor = Color.Red;
-                return;
             }
             CargarProxLegajo();
-
             LimpiarCasillas();
         }
 
@@ -185,6 +179,7 @@ namespace ClinicaMedica
         {
             Session["UsuarioActivo"] = null;
             Response.Redirect("ListadoTurnos.aspx");
+
         }
 
         protected void btnUserImg_Click(object sender, System.Web.UI.ImageClickEventArgs e)

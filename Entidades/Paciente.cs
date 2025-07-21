@@ -16,12 +16,13 @@ namespace Entidades
         private string Apellido;
         private string Sexo;
         private string Nacionalidad;
-        private DateTime Fecha;
+        private DateTime Fecha;//No sabia que existia este tipo de variable, lo busque por la del sql, ya que en la bd esta como datetime, capaz se modifica despues
         private string Direccion;
         private int Provincia;
         private int Localidad;
         private string Correo;
         private string Telefono;
+
 
         public Paciente(string dni, string nombre, string apellido, string sexo, string nacionalidad, DateTime fecha, string direccion, int provincia, int localidad, string correo, string telefono)
         {
@@ -37,6 +38,16 @@ namespace Entidades
             Correo = correo;
             Telefono = telefono;
         }
+
+        // => funciona cuando hay solo una linea de código por ejemplo:
+
+        /* void SetDni(string dni){
+         
+            Dni = dni;
+
+        }*/
+
+        // lo cual genera que se ahorre mucho el código usado
         
         public void SetDni(string dni) => Dni = dni; public string GetDni() => Dni;
         public void SetNombre(string nombre) => Nombre = nombre; public string GetNombre() => Nombre;

@@ -28,8 +28,6 @@ namespace ClinicaMedica
                 {
                     Response.Redirect("ListadoTurnos.aspx");
                 }
-
-
             }
         }
 
@@ -76,10 +74,8 @@ namespace ClinicaMedica
                     lblAusentes.Text = porcentajeAusentes.ToString("0.00")+"%";
                 }
 
-                lblDesde.Text = txtFechaDesde.Text;
-                lblDesde2.Text = txtFechaDesde.Text;
-                lblHasta.Text = txtFechaHasta.Text;
-                lblHasta2.Text = txtFechaHasta.Text;
+
+
 
             }
         }

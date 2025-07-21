@@ -105,13 +105,13 @@ namespace ClinicaMedica
         protected global::System.Web.UI.WebControls.HyperLink hlListarTurnos;
 
         /// <summary>
-        /// Control hlCrearCuentaAdmin.
+        /// Control hlAgregarMedico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlCrearCuentaAdmin;
+        protected global::System.Web.UI.WebControls.HyperLink hlAgregarMedico;
 
         /// <summary>
         /// Control hlAsignarTurnos.
@@ -123,15 +123,6 @@ namespace ClinicaMedica
         protected global::System.Web.UI.WebControls.HyperLink hlAsignarTurnos;
 
         /// <summary>
-        /// Control HlListarPacientes.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HlListarPacientes;
-
-        /// <summary>
         /// Control hlListarMedicos.
         /// </summary>
         /// <remarks>
@@ -141,13 +132,13 @@ namespace ClinicaMedica
         protected global::System.Web.UI.WebControls.HyperLink hlListarMedicos;
 
         /// <summary>
-        /// Control hlAgregarMedico.
+        /// Control HlListarPacientes.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlAgregarMedico;
+        protected global::System.Web.UI.WebControls.HyperLink HlListarPacientes;
 
         /// <summary>
         /// Control hlInformes.

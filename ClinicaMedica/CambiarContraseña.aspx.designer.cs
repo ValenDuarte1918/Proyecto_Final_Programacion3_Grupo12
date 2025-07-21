@@ -11,7 +11,7 @@ namespace ClinicaMedica
 {
 
 
-    public partial class CambiarContrasenia
+    public partial class CambiarContraseña
     {
 
         /// <summary>
@@ -60,13 +60,13 @@ namespace ClinicaMedica
         protected global::System.Web.UI.WebControls.HyperLink hlListarTurnos;
 
         /// <summary>
-        /// Control hlCrearCuentaAdmin.
+        /// Control hlAgregarMedico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlCrearCuentaAdmin;
+        protected global::System.Web.UI.WebControls.HyperLink hlAgregarMedico;
 
         /// <summary>
         /// Control hlAsignarTurnos.
@@ -78,6 +78,15 @@ namespace ClinicaMedica
         protected global::System.Web.UI.WebControls.HyperLink hlAsignarTurnos;
 
         /// <summary>
+        /// Control hListarMedicos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hListarMedicos;
+
+        /// <summary>
         /// Control HlListarPacientes.
         /// </summary>
         /// <remarks>
@@ -85,24 +94,6 @@ namespace ClinicaMedica
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HlListarPacientes;
-
-        /// <summary>
-        /// Control hlListarMedicos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlListarMedicos;
-
-        /// <summary>
-        /// Control hlAgregarMedico.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlAgregarMedico;
 
         /// <summary>
         /// Control hlInformes.
@@ -229,5 +220,50 @@ namespace ClinicaMedica
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCambiarContrasenia;
+
+        /// <summary>
+        /// Control crearAdmin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel crearAdmin;
+
+        /// <summary>
+        /// Control txtUsuarioAdmin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtUsuarioAdmin;
+
+        /// <summary>
+        /// Control txtDniAdmin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDniAdmin;
+
+        /// <summary>
+        /// Control txtContraseniaAdmin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtContraseniaAdmin;
+
+        /// <summary>
+        /// Control btnCrearCuentaAdmin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCrearCuentaAdmin;
     }
 }

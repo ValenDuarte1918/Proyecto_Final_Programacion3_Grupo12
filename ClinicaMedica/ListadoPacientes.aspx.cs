@@ -1,7 +1,10 @@
 ﻿using Entidades;
 using Servicios;
 using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Linq;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using static Servicios.GestionTablas;
@@ -11,7 +14,6 @@ namespace ClinicaMedica
     public partial class ListadoPacientes : System.Web.UI.Page
     {
         private GestionTablas gestorTablas = new GestionTablas();
-        private GestionRegistros gestorRegistros = new GestionRegistros();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -19,6 +21,7 @@ namespace ClinicaMedica
                 btnUserImg.Visible = true;
 
                 llenarGrillaPacientes();
+                //gestorDdl.CargarEspecialidades(ddlEspecialidades);
 
                 if (Session["UsuarioActivo"] != null)
                 {
@@ -86,10 +89,10 @@ namespace ClinicaMedica
         {
             if (e.CommandName == "Eliminar")
             {
-                string dni = Convert.ToString(e.CommandArgument);
+                int dni = Convert.ToInt32(e.CommandArgument);
 
-                
-                bool exito = gestorRegistros.BajaPaciente(dni);
+                var gestorPacientes = new GestionTablas.GestionMedicos();
+                bool exito = gestorPacientes.DarDeBajaMedico(dni);//Hay que cambiar esto
 
                 if (exito)
                 {
@@ -134,20 +137,19 @@ namespace ClinicaMedica
         {
             // Obtiene la fila que se está editando
             GridViewRow row = gvPacientes.Rows[e.RowIndex];
-
-            string dni = gvPacientes.DataKeys[e.RowIndex].Value.ToString();
             // Obtiene los valores de los controles dentro de la fila
-            string nombre = ((TextBox)row.FindControl("txt_et_Nombre")).Text.Trim();
-            string apellido = ((TextBox)row.FindControl("txt_et_Apellido")).Text.Trim();
-            string telefono = ((TextBox)row.FindControl("txt_et_Telefono")).Text.Trim();
-            string correo = ((TextBox)row.FindControl("txt_et_Correo")).Text.Trim();
+            string dni = ((Label)row.FindControl("lblDni")).Text;
+            string nombre = ((TextBox)row.FindControl("txtNombre")).Text.Trim();
+            string apellido = ((TextBox)row.FindControl("txtApellido")).Text.Trim();
+            string telefono = ((TextBox)row.FindControl("txtTelefono")).Text.Trim();
+            string correo = ((TextBox)row.FindControl("txtCorreo")).Text.Trim();
             // aca creamos una instancia del gestor de Paciente
 
+            //Paciente 
 
-
-            //var gestorMedicos = new GestionTablas.GestionMedicos();
+            var gestorMedicos = new GestionTablas.GestionMedicos();
             // Llama al método para actualizar el Paciente
-            bool exito = gestorRegistros.ActualizarPaciente(dni, nombre, apellido, telefono, correo);
+            bool exito = gestorMedicos.ActualizarMedico(dni, nombre, apellido, telefono, correo);
 
             if (exito)
             {

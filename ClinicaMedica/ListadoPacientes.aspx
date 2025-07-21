@@ -43,7 +43,7 @@
                 <img src="Estilo/logoClinica.png" class="header-image" alt="Logo Clinica" />
                 <div class="header-links">
                     <asp:HyperLink ID="hlListarTurnos" runat="server" CssClass="header-link" NavigateUrl="ListadoTurnos.aspx" Text="Listado de Turnos"></asp:HyperLink>
-                    <%--<asp:HyperLink ID="hlSeguimientoPaciente" runat="server" CssClass="header-link" Text="Seguimiento Paciente" TabIndex="4" NavigateUrl="~/SeguimientosPacientes.aspx"></asp:HyperLink>--%>
+                    <asp:HyperLink ID="hlSeguimientoPaciente" runat="server" CssClass="header-link" Text="Seguimiento Paciente" TabIndex="4" NavigateUrl="~/SeguimientosPacientes.aspx"></asp:HyperLink>
                     <asp:HyperLink ID="hlAgregarMedico" runat="server" CssClass="header-link" NavigateUrl="RegistrarMedico.aspx" Text="Agregar Medico"></asp:HyperLink>
                     <asp:HyperLink ID="hlAsignarTurnos" runat="server" CssClass="header-link" NavigateUrl="AsignacionTurnos.aspx" Text="Asignar Turnos"></asp:HyperLink>
                     <asp:HyperLink ID="hListarMedicos" runat="server" CssClass="header-link" NavigateUrl="ListadoDeMedicos.aspx" Text="Listar Medicos"></asp:HyperLink>
@@ -70,77 +70,65 @@
                     AllowPaging="True"
                     OnPageIndexChanging="gvPacientes_PageIndexChanging"
                     PageSize="5"
-                    DataKeyNames="DNI"
                     OnRowEditing="gvPacientes_RowEditing"
                     OnRowUpdating="gvPacientes_RowUpdating"
                     OnRowCancelingEdit="gvPacientes_RowCancelingEdit" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="gvPacientes_SelectedIndexChanged">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
-    <asp:TemplateField HeaderText="Dni">
-        <ItemTemplate>
-            <asp:Label ID="lbl_it_Dni" runat="server" Text='<%# Bind("DNI") %>'></asp:Label>
-        </ItemTemplate>
-    </asp:TemplateField>
-    <asp:TemplateField HeaderText="Nombre">
-    <ItemTemplate>
-        <asp:Label ID="lbl_it_Nombre" runat="server" Text='<%# Bind("Nombre") %>'></asp:Label>
-    </ItemTemplate>
-    <EditItemTemplate>
-        <asp:TextBox ID="txt_et_Nombre" runat="server" Text='<%# Bind("Nombre") %>'></asp:TextBox>
-    </EditItemTemplate>
-    </asp:TemplateField>
-    <asp:TemplateField HeaderText="Apellido">
-    <ItemTemplate>
-        <asp:Label ID="lbl_it_Apellido" runat="server" Text='<%# Bind("Apellido") %>'></asp:Label>
-    </ItemTemplate>
-    <EditItemTemplate>
-        <asp:TextBox ID="txt_et_Apellido" runat="server" Text='<%# Bind("Apellido") %>'></asp:TextBox>
-    </EditItemTemplate>
-</asp:TemplateField>
-    <asp:TemplateField HeaderText=" Fecha de Nacimiento">
-        <ItemTemplate>
-            <asp:Label ID="lbl_it_Fecha" runat="server" Text='<%# Bind("FechaNacimiento") %>'></asp:Label>
-        </ItemTemplate>
-    </asp:TemplateField>
-    <asp:TemplateField HeaderText="Sexo">
-        <ItemTemplate>
-            <asp:Label ID="lbl_it_Sexo" runat="server" Text='<%# Bind("Sexo") %>'></asp:Label>
-        </ItemTemplate>
-    </asp:TemplateField>
-    <asp:TemplateField HeaderText="Nacionalidad">
-        <ItemTemplate>
-            <asp:Label ID="lbl_it_Nacionalidad" runat="server" Text='<%# Bind("Nacionalidad") %>'></asp:Label>
-        </ItemTemplate>
-    </asp:TemplateField>
-    <asp:TemplateField HeaderText="Numero de Telefono">
-    <ItemTemplate>
-        <asp:Label ID="lbl_it_Telefono" runat="server" Text='<%# Bind("Telefono") %>'></asp:Label>
-    </ItemTemplate>
-    <EditItemTemplate>
-        <asp:TextBox ID="txt_et_Telefono" runat="server" Text='<%# Bind("Telefono") %>'></asp:TextBox>
-    </EditItemTemplate>
-</asp:TemplateField>
-    <asp:TemplateField HeaderText="Provincia">
-        <ItemTemplate>
-            <asp:Label ID="lbl_it_Provincia" runat="server" Text='<%# Bind("Provincia") %>'></asp:Label>
-        </ItemTemplate>
-    </asp:TemplateField>
-    <asp:TemplateField HeaderText="Correo Electronico">
-    <ItemTemplate>
-        <asp:Label ID="lbl_it_Correo" runat="server" Text='<%# Bind("Correo") %>'></asp:Label>
-    </ItemTemplate>
-    <EditItemTemplate>
-        <asp:TextBox ID="txt_et_Correo" runat="server" Text='<%# Bind("Correo") %>'></asp:TextBox>
-    </EditItemTemplate>
-</asp:TemplateField>
-                        <asp:TemplateField HeaderText="Dar de Baja">
-    <ItemTemplate>
-        <asp:LinkButton ID="lnkEliminar" runat="server" CommandName="Eliminar" CommandArgument='<%# Eval("DNI") %>'
-            Text="Eliminar" OnClientClick="return confirm('¿Seguro que desea eliminar el médico?');" />
-    </ItemTemplate>
-</asp:TemplateField>
-    <asp:CommandField ShowEditButton="True" />
-</Columns>
+                        <asp:TemplateField HeaderText="Dni">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_it_Dni" runat="server" Text='<%# Bind("DNI") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Nombre">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_it_Nombre" runat="server" Text='<%# Bind("Nombre") %>'></asp:Label>
+
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Apellido">
+                            <ItemTemplate>
+
+                                <asp:Label ID="lbl_it_Apellido" runat="server" Text='<%# Bind("Apellido") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText=" Fecha de Nacimiento">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_it_Fecha" runat="server" Text='<%# Bind("FechaNacimiento") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Sexo">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_it_Sexo" runat="server" Text='<%# Bind("Sexo") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Nacionalidad">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_it_Nacionalidad" runat="server" Text='<%# Bind("Nacionalidad") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Direccion">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_it_Direccion" runat="server" Text='<%# Bind("Direccion") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Numero de Telefono">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_it_Telefono" runat="server" Text='<%# Bind("Telefono") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Provincia">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_it_Provincia" runat="server" Text='<%# Bind("Provincia") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Correo Electronico">
+                            <ItemTemplate>
+                                <asp:Label ID="lbl_it_Correo" runat="server" Text='<%# Bind("Correo") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:CommandField ShowEditButton="True" />
+                    </Columns>
                     <EditRowStyle BackColor="#999999" />
                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                     <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -161,3 +149,4 @@
     </form>
 </body>
 </html>
+

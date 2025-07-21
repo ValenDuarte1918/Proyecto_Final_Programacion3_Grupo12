@@ -60,13 +60,13 @@ namespace ClinicaMedica
         protected global::System.Web.UI.WebControls.HyperLink hlListarTurnos;
 
         /// <summary>
-        /// Control hlCrearCuentaAdmin.
+        /// Control hlAgregarMedico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlCrearCuentaAdmin;
+        protected global::System.Web.UI.WebControls.HyperLink hlAgregarMedico;
 
         /// <summary>
         /// Control hlAsignarTurnos.
@@ -78,6 +78,15 @@ namespace ClinicaMedica
         protected global::System.Web.UI.WebControls.HyperLink hlAsignarTurnos;
 
         /// <summary>
+        /// Control hListarMedicos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hListarMedicos;
+
+        /// <summary>
         /// Control HlListarPacientes.
         /// </summary>
         /// <remarks>
@@ -87,24 +96,6 @@ namespace ClinicaMedica
         protected global::System.Web.UI.WebControls.HyperLink HlListarPacientes;
 
         /// <summary>
-        /// Control hlListarMedicos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlListarMedicos;
-
-        /// <summary>
-        /// Control hlAgregarMedico.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlAgregarMedico;
-
-        /// <summary>
         /// Control hlInformes.
         /// </summary>
         /// <remarks>
@@ -112,24 +103,6 @@ namespace ClinicaMedica
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hlInformes;
-
-        /// <summary>
-        /// Control lblPrimerRegitro.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPrimerRegitro;
-
-        /// <summary>
-        /// Control lblUltimoRegitro.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUltimoRegitro;
 
         /// <summary>
         /// Control lblFechaDesde.
@@ -177,24 +150,6 @@ namespace ClinicaMedica
         protected global::System.Web.UI.WebControls.Button btnGenerarInforme;
 
         /// <summary>
-        /// Control lblDesde.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDesde;
-
-        /// <summary>
-        /// Control lblHasta.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHasta;
-
-        /// <summary>
         /// Control lblPresentes.
         /// </summary>
         /// <remarks>
@@ -211,24 +166,6 @@ namespace ClinicaMedica
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblInformePresentismo;
-
-        /// <summary>
-        /// Control lblDesde2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDesde2;
-
-        /// <summary>
-        /// Control lblHasta2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHasta2;
 
         /// <summary>
         /// Control lblAusentes.
@@ -256,5 +193,14 @@ namespace ClinicaMedica
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMensaje;
+
+        /// <summary>
+        /// Control lblInformeComparacionMesAnterior.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblInformeComparacionMesAnterior;
     }
 }

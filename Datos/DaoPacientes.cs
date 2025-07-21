@@ -99,31 +99,5 @@ namespace Datos
             };
             return ds.EjecutarConsultaSelectDataAdapter("sp_ListarHistorialDePaciente", parametros);
         }
-
-        public bool ActualizarPacienteEdit(string dni, string nombre, string apellido, string telefono, string correo)
-        {
-            SqlCommand sqlCommand = new SqlCommand();
-
-            sqlCommand.Parameters.AddWithValue("@Dni", dni);
-            sqlCommand.Parameters.AddWithValue("@Nombre", nombre);
-            sqlCommand.Parameters.AddWithValue("@Apellido", apellido);
-            sqlCommand.Parameters.AddWithValue("@Telefono", telefono);
-            sqlCommand.Parameters.AddWithValue("@Correo", correo);
-
-
-
-            return ds.EjecutarProcedimientoAlmacenado(sqlCommand, "SP_ActualizarMedico") > 0;
-        }
-
-        public bool BajaPaciente(string dni)
-        {
-            SqlCommand sqlCommand = new SqlCommand();
-
-            sqlCommand.Parameters.AddWithValue("@Dni", dni);
-
-
-
-            return ds.EjecutarProcedimientoAlmacenado(sqlCommand, "SP_BajaLogicaPacientes") > 0;
-        }
     }
 }

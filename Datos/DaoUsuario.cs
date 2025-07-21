@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
+using Entidades;
 
 namespace Datos
 {
@@ -19,7 +20,8 @@ namespace Datos
 
             return DatosDeUsuario;
         }
-        public bool CambiarContrasenia(int idUsuario, string nuevaClave)
+    
+    public bool CambiarContrasenia(int idUsuario, string nuevaClave)
         {
             SqlCommand command = new SqlCommand
             {
@@ -29,29 +31,6 @@ namespace Datos
             command.Parameters.AddWithValue("@IdUsuario", idUsuario);
             command.Parameters.AddWithValue("@NuevaContraseña", nuevaClave);
             return accesoDatos.EjecutarProcedimientoAlmacenado(command, "SP_CambiarContraseñaUsuario") > 0;
-        }
-        public bool CrearCuenta(string Nombre, string Apellido, string Dni)
-        {
-            SqlCommand command = new SqlCommand();
-
-            command.Parameters.AddWithValue("@Nombre", Nombre);
-            command.Parameters.AddWithValue("@Apellido", Apellido);
-            command.Parameters.AddWithValue("@DniUsuario", Dni);
-
-            return accesoDatos.EjecutarProcedimientoAlmacenado(command, "SP_RegistrarCuenta") > 0;
-        }
-        public string ObtenerNombreUsuario(string DniUsuario)
-        {
-            SqlParameter[] parametros = new SqlParameter[] {
-                new SqlParameter("@DniUsuario", DniUsuario)
-            };
-
-            DataTable nombreCuenta = accesoDatos.EjecutarConsultaSelectDataAdapter("SP_ObtenerNombreUsuario" , parametros);
-            if (nombreCuenta.Rows.Count > 0)
-            {
-                return nombreCuenta.Rows[0]["NombreUsuario"].ToString();
-            }
-            return string.Empty;
         }
     }
 } 
